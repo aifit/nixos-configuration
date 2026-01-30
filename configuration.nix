@@ -278,7 +278,7 @@ hardware.bluetooth = {
 
 # mount my additional partition at /personal
 fileSystems."/personal" = {
-  device = "UUID=1c8f7cab-8571-4c20-8b2a-44d1e813f557";
+  device = "UUID=1c8f7cab-8571-4c20-8b2a-44d1e813f557"; # This UUID is specific to my hardware
   fsType = "ext4";
   options = [ "defaults" "nofail" "x-systemd.device-timeout=10s" ];
 };
