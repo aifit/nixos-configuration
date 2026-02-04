@@ -149,6 +149,9 @@
         # youtube viewer terminal
         pipe-viewer
 
+        # alternatif ssh untuk koneksi internat tidak stabil 
+        mosh
+
   ];
 
 environment.variables.ALSA_CONFIG_UCM2 =
