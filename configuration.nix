@@ -152,6 +152,9 @@
         # alternatif ssh untuk koneksi internat tidak stabil 
         mosh
 
+        tailscale
+        tigervnc
+
   ];
 
 environment.variables.ALSA_CONFIG_UCM2 =
