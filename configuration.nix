@@ -127,9 +127,10 @@
         # overlay display volume dan brightness dll
         swayosd
 
-        # screenshoot
+        # screenshoot & screen recording
         grim   # screenshot
         slurp  # pilih area
+	      wf-recorder # rekam layar
 
         # neofetch alternative
         fastfetch
@@ -149,12 +150,11 @@
         # youtube viewer terminal
         pipe-viewer
 
-        # alternatif ssh untuk koneksi internat tidak stabil 
-        mosh
+  	    # alternatif ssh untuk koneksi internet tidak stabil
+	      mosh
 
-        tailscale
-        tigervnc
-
+	      tailscale
+	      tigervnc
   ];
 
 environment.variables.ALSA_CONFIG_UCM2 =
@@ -187,6 +187,7 @@ xdg.portal = {
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
+  services.tailscale.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -282,9 +283,9 @@ hardware.bluetooth = {
   zramSwap.memoryPercent = 80;  # gunakan 80% dari RAM untuk zram (sekitar 3.2 GB)
   zramSwap.algorithm = "zstd";  # kompresi efisien & cepat
 
-# mount my additional partition at /personal
+
 fileSystems."/personal" = {
-  device = "UUID=1c8f7cab-8571-4c20-8b2a-44d1e813f557"; # This UUID is specific to my hardware
+  device = "UUID=1c8f7cab-8571-4c20-8b2a-44d1e813f557";
   fsType = "ext4";
   options = [ "defaults" "nofail" "x-systemd.device-timeout=10s" ];
 };
@@ -303,4 +304,5 @@ environment.variables.EDITOR = "nvim";
 
 
 }
+
 
